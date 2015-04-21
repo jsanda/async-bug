@@ -3,4 +3,5 @@
 counter=1000
 while [ $counter -gt 0 ]; do
    curl -X POST http://127.0.0.1:8080/hawkular-metrics/TEST/metrics/numeric/N44/data -d '[1, 2, 3]' -HContent-Type:application/json &
+   counter=$[$counter-1]
 done
